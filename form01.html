@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario - Inscrição nos Jogos Escolares</title>
+</head>
+<body>
+<header>
+    <h1>Inscrição nos Jogos Escolares</h1>
+    Preencha os campos abaixo com suas informações.
+</header>
+
+
+<main>
+<form action="/inscricoes-jogos" id="inscricao-jogos" method="post" enctype="multipart/form-data">
+
+<fieldset>
+    <legend>1. Identificação do atleta</legend>
+<label for="nome-completo">Nome completo do atleta (Obrigatório)</label>
+<input type="text" name="nome-completo" id="nome-completo">
+<br>
+<label for="nome-social">Nome social do atleta</label>
+<input type="text" name="nome-social" id="nome-social">
+<br>
+<label for="matricula">Matricula (Obrigatória)</label>
+<input type="" name="matricula" id="matricula">
+<br>
+<label for="nascimento">Data de nascimento</label>
+<input type="date" name="nascimento" id="nascimento">
+<br>
+<label for="e-mail">E-mail de contato (Obrigatório)</label>
+<input type="text" name="e-mail" id="e-mail">
+<br>
+<label for="telefone">Telefone de contato (Obrigatório)</label>
+<input type="text" name="telefone" id="telefone">
+<br>
+<label for="site-escola">Site da Escola</label>
+<input type="text" name="site-escola" id="site-escola" placeholder="https://site.escola.com.br">
+</fieldset>
+
+<fieldset>
+    <legend>2. Escola e delegação</legend>
+<label for="escola">Escola de origem</label>
+<input type="" name="escola" id="escola">
+<br>
+<label for="turma">Turma</label>
+<input type="text" name="turma" id="turma">
+<br>
+<label for="professor">Professor responsével</label>
+<input type="text" name="professor" id="professor">
+<br>
+<label for="telefone-professor">Telefone do professor</label>
+<input type="text" name="telefone-professor" id="telefone-professor">
+<br>
+</fieldset>
+
+<fieldset>
+    <legend>3. Participação nos jogos</legend>
+    <fieldset>
+        <legend>Turno de preferencia</legend>
+        <label for="turno">Turno</label>
+        <input type="text" name="turno" id="turno">
+    </fieldset>
+</fieldset>
+</form>
+</main>
+</body>
+</html>
