@@ -24,26 +24,25 @@
 <input type="text" name="nome-social" id="nome-social">
 <br>
 <label for="matricula">Matricula (Obrigatória)</label>
-<input type="" name="matricula" id="matricula">
+<input type="number" name="matricula" id="matricula">
 <br>
 <label for="nascimento">Data de nascimento</label>
-<input type="date" name="nascimento" id="nascimento">
+<input type="datetime-local" name="nascimento" id="nascimento">
 <br>
 <label for="e-mail">E-mail de contato (Obrigatório)</label>
-<input type="text" name="e-mail" id="e-mail">
+<input type="email" name="e-mail" id="e-mail">
 <br>
 <label for="telefone">Telefone de contato (Obrigatório)</label>
-<input type="text" name="telefone" id="telefone">
+<input type="tel" name="telefone" id="telefone">
 <br>
 <label for="site-escola">Site da Escola</label>
-<input type="text" name="site-escola" id="site-escola" placeholder="https://site.escola.com.br">
+<input type="url" name="site-escola" id="site-escola" placeholder="https://site.escola.com.br">
 </fieldset>
 
 <fieldset>
     <legend>2. Escola e delegação</legend>
 <label for="escola">Escola de origem</label>
 <input type="search" name="escola" id="escola" list="escolas">
-
 <datalist id="escolas">
     <option value="Escola Horizonte"></option>
     <option value="Escola Azul"></option>
@@ -52,8 +51,7 @@
 <br>
 <label for="turma">Turma</label>
 <input type="" name="turma" id="turma" list="turmas">
-
-<datalist>
+<datalist id="turmas">
     <option value="Ensino Fundamental: 7° Ano"></option>
     <option value="Ensino Fundamental: 8° Ano"></option>
     <option value="Ensino Fundamental: 9° Ano"></option>
