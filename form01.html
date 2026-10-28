@@ -18,22 +18,22 @@
 <fieldset>
     <legend>1. Identificação do atleta</legend>
 <label for="nome-completo">Nome completo do atleta (Obrigatório)</label>
-<input type="text" name="nome-completo" id="nome-completo">
+<input type="text" name="nome-completo" id="nome-completo" required>
 <br>
 <label for="nome-social">Nome social do atleta</label>
 <input type="text" name="nome-social" id="nome-social">
 <br>
 <label for="matricula">Matricula (Obrigatória)</label>
-<input type="number" name="matricula" id="matricula">
+<input type="number" name="matricula" id="matricula" required>
 <br>
 <label for="nascimento">Data de nascimento</label>
-<input type="datetime-local" name="nascimento" id="nascimento">
+<input type="date" name="nascimento" id="nascimento">
 <br>
 <label for="e-mail">E-mail de contato (Obrigatório)</label>
-<input type="email" name="e-mail" id="e-mail">
+<input type="email" name="e-mail" id="e-mail" required>
 <br>
 <label for="telefone">Telefone de contato (Obrigatório)</label>
-<input type="tel" name="telefone" id="telefone">
+<input type="tel" name="telefone" id="telefone" required>
 <br>
 <label for="site-escola">Site da Escola</label>
 <input type="url" name="site-escola" id="site-escola" placeholder="https://site.escola.com.br">
@@ -50,28 +50,118 @@
 </datalist>
 <br>
 <label for="turma">Turma</label>
-<input type="" name="turma" id="turma" list="turmas">
-<datalist id="turmas">
-    <option value="Ensino Fundamental: 7° Ano"></option>
-    <option value="Ensino Fundamental: 8° Ano"></option>
-    <option value="Ensino Fundamental: 9° Ano"></option>
-</datalist>
+<select name="turma" id="turma">
+    <option value="Ensino Fundamental: 7° Ano">Ensino Fundamental: 7° Ano</option>
+    <option value="Ensino Fundamental: 8° Ano">Ensino Fundamental: 8° Ano</option>
+    <option value="Ensino Fundamental: 9° Ano">Ensino Fundamental: 9° Ano</option>
+    <option value="Ensino Médio: 1° Ano">Ensino Médio: 1° Ano</option>
+    <option value="Ensino Médio: 2° Ano">Ensino Médio: 2° Ano</option>
+    <option value="Ensino Médio: 3° Ano">Ensino Médio: 3° Ano</option>
+</select>
 <br>
-<label for="professor">Professor responsével</label>
-<input type="text" name="professor" id="professor">
+<label for="nome-equipe">Nome da Equipe</label>
+<input type="text" name="nome-equipe" id="nome-equipe">
+<br>
+<label for="professor">Professor responsável</label>
+<input type="tel" name="professor" id="professor">
 <br>
 <label for="telefone-professor">Telefone do professor</label>
 <input type="text" name="telefone-professor" id="telefone-professor">
 <br>
 </fieldset>
-
 <fieldset>
     <legend>3. Participação nos jogos</legend>
     <fieldset>
         <legend>Turno de preferencia</legend>
-        <label for="turno">Turno</label>
-        <input type="text" name="turno" id="turno">
+        <input type="radio" name="turno" id="turno-manha">
+        <label for="turno-manha">Manhã</label>
+        <input type="radio" name="turno" id="turno-tarde">
+        <label for="turno-tarde">Tarde</label>
+        <input type="radio" name="turno" id="turno-noite">
+        <label for="turno-noite">Noite</label>
     </fieldset>
+    <fieldset>
+        <legend>Modalidades de interesse (permite várias escolhas)</legend>
+        <input type="checkbox" name="futsal" id="futsal">
+        <label for="futsal">Futsal</label>
+        <input type="checkbox" name="volei" id="volei">
+        <label for="volei">Volei</label>
+        <input type="checkbox" name="futebol" id="futebol">
+        <label for="futebol">Futebol</label>
+        <input type="checkbox" name="tenis" id="tenis">
+        <label for="tenis">Tenis</label>
+        <input type="checkbox" name="xadrez" id="xadrez">
+        <label for="xadrez">Xadrez</label>
+        <input type="checkbox" name="natacao" id="natacao">
+        <label for="natacao">Natação</label>
+    </fieldset>
+    <label for="tamanho-camiseta">Tamanho da camiseta</label>
+    <select name="tamanho-camiseta" id="tamanho-camiseta">
+        <option value="" hidden>Escolha o tamanho de sua camiseta</option>
+        <option value="24">Tamanho 24</option>
+        <option value="26">Tamanho 26</option>
+        <option value="28">Tamanho 28</option>
+    </select>
+
+    <fieldset>
+        <legend>Participação em atividades complementares</legend>
+        <input type="checkbox" name="abertura" id="abertura">
+        <label for="abertura">Cerimonia de abertura</label>
+        <br>
+        <input type="checkbox" name="arbitragem" id="arbitragem">
+        <label for="arbitragem">Oficina de arbitragem</label>
+        <br>
+        <input type="checkbox" name="organizacao-equipes" id="organizacao-equipes">
+        <label for="organizacao-equipes">Organização das equipes</label>
+    </fieldset>
+    <label for="acompanhantes">Quantidade de acompanhantes</label>
+    <input type="number" name="acompanhantes" id="acompanhantes">
+</fieldset>
+<fieldset>
+    <legend>4. Preparação e disponibilidade</legend>
+    <label for="mes-preparacao">Mês do inicio da preparação</label>
+    <input type="month" name="mes-preparacao" id="mes-preparacao">
+    <br>
+    <label for="semana-treinamento">Semana de treinamento</label>
+    <input type="week" name="semana-treinamento" id="semana-treinamento">
+    <br>
+    <label for="horario-chegada">Horario previsto de chegada</label>
+    <input type="time" name="horario-chegada" id="horario-chegada">
+    <br>
+    <label for="data-hora-local-kit">Data e hora do local para retirada do kit</label>
+    <input type="datetime-local" name="data-hora-local-kit" id="data-hora-local-kit">
+    <br>
+</fieldset>
+<fieldset>
+    <legend>Preferências, anexo e observações</legend>
+    <label for="cor">Cor da delegação</label>
+    <input type="color" name="cor" id="cor">
+    <br>
+    <label for="interesse">Interesse nas atividade complementares, de 0 a 100</label>
+    <input type="range" name="interesse" id="interesse">
+    <br>
+    <label for="documento-anexo">Documento fictício</label>
+    <input type="file" name="documento-anexo" id="documento-anexo">
+    <br>
+    <label for="obs">Observações para a organização</label>
+    <textarea name="obs" id="obs"></textarea>
+</fieldset>
+<fieldset>
+    <legend>6. Demonstrações e confirmação</legend>
+    <label for="senha">Senha fictícia</label>
+    <input type="password" name="senha" id="senha">
+    <p>Essa demonstração não cria uma conta de fato, não utilize uma senha real.</p>
+    <legend>Exemplo fixo> 1 atleta + 2 acompanhantes. Total de pessoas: 3</legend>
+    <p>O total ilustrativo não se atualiza ao alterar o campo</p>
+    <input type="checkbox" name="tc" id="tc">
+    <label for="tc">Li as orientações desta atividade (Obrigatório)</label>
+    <br>
+    <button type="submit" name="acao" value="inscrever">Confirmar Inscrição</button>
+    <input type="submit" name="" id="">
+    <input type="reset">
+    <input type="button" value="Ajuda Demonstrativa">
+    <p>A ajuda não possui ação adicional nesta parte. A submissão não conclui um cadastro real nesta versão. O destino de envio é ilustrativo e pode apresentar um erro ao ser acessado.</p>
+
 </fieldset>
 </form>
 </main>
